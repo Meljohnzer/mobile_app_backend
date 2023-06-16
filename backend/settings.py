@@ -128,6 +128,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+# ilisan ni nimo diri sa imong mailtrap nga account kay wla pa naku na setupan og email
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = '250f1e786b88ff'
 EMAIL_HOST_PASSWORD = 'cb1098b88b53ee'
