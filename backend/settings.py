@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-g2kz%t2cr-am!)+fc))2%)s0jfa+6_)wu#nhw^-kmd83t5_i=y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','Meljohnzer.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','Meljohnzer.pythonanywhere.com','127.0.0.1']
 
 AUTH_USER_MODEL = 'api.User'
 
@@ -129,10 +129,20 @@ USE_I18N = True
 USE_TZ = True
 
 # ilisan ni nimo diri sa imong mailtrap nga account kay wla pa naku na setupan og email
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '250f1e786b88ff'
-EMAIL_HOST_PASSWORD = 'cb1098b88b53ee'
-EMAIL_PORT = '2525'
+# EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+# EMAIL_HOST_USER = '250f1e786b88ff'
+# EMAIL_HOST_PASSWORD = 'cb1098b88b53ee'
+# EMAIL_PORT = '2525'
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'team.besagunsa@gmail.com' # Replace with your email
+EMAIL_HOST_PASSWORD = 'ewpctbaoeyahlrek' # Replace with your email password
+DEFAULT_FROM_EMAIL = 'team.besagunsa@gmail.com' # Replace with your email
+
 
 
 # Static files (CSS, JavaScript, Images)
