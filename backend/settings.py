@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-g2kz%t2cr-am!)+fc))2%)s0jfa+6_)wu#nhw^-kmd83t5_i=y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','Meljohnzer.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['localhost','Hanapp.pythonanywhere.com','127.0.0.1']
 
 AUTH_USER_MODEL = 'api.User'
 
@@ -88,11 +88,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hanapp_db',
-        'HOST' : '127.0.0.1',
+        'NAME': 'Meljohnzer$hanapp_db',
+        'HOST' : 'Meljohnzer.mysql.pythonanywhere-services.com',
         'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD' : '',
+        'USER': 'Meljohnzer',
+        'PASSWORD' : 'youporn231',
       
     }
 }
