@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-g2kz%t2cr-am!)+fc))2%)s0jfa+6_)wu#nhw^-kmd83t5_i=y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','Hanapp.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['Hanapp.pythonanywhere.com']
 
 AUTH_USER_MODEL = 'api.User'
 
@@ -88,12 +88,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Meljohnzer$hanapp_db',
-        'HOST' : 'Meljohnzer.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
-        'USER': 'Meljohnzer',
-        'PASSWORD' : 'youporn231',
-      
+        'NAME': 'Hanapp$hanapp_db',
+        'HOST' : 'Hanapp.mysql.pythonanywhere-services.com',
+        'USER': 'Hanapp',
+        'PASSWORD' : 'thisisthepassword!@#$%',
+
     }
 }
 
@@ -149,7 +148,7 @@ DEFAULT_FROM_EMAIL = 'team.besagunsa@gmail.com' # Replace with your email
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = 'files/'
+MEDIA_URL = 'backend/static/files/'
 
 STATICFILES_DIRS =[
 os.path.join(BASE_DIR, 'backend/static/')
@@ -178,7 +177,7 @@ DJOSER = {
 
 REST_FRAMEWORK = {
     #  'DEFAULT_PERMISSION_CLASSES':[
-    #   'rest_framework.permissions.IsAuthenticated',  
+    #   'rest_framework.permissions.IsAuthenticated',
     # ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -190,7 +189,7 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
    'AUTH_HEADER_TYPES': ('JWT',),
-   
+
 }
 
 # STATICFILES_DIRS = [
